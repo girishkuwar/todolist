@@ -1,0 +1,181 @@
+/* this card is inspired form this - https://georgefrancis.dev/ */
+body {
+  background-color: rgb(201, 201, 201);
+}
+h1 {
+  color: #7257fa;
+  text-align: center;
+  font-size: 3rem;
+}
+.container {
+  grid-template-columns: repeat(4, 1fr);
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  padding: 0 2%;
+  grid-auto-columns: minmax(100px, auto);
+}
+
+.inputstyled {
+  display: flex;
+  height: 40px;
+  border: 1px solid #7257fa;
+  width: 300px;
+  border-radius: 100px;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+}
+
+.inputstyled input {
+  padding: 0px;
+  width: 90%;
+  height: 100%;
+  margin: 0px 0;
+  border-right: 0px;
+  border-radius: 100px 0 0 100px;
+  border: 1px solid #7257fa;
+}
+
+.inputstyled p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  text-align: center;
+  border: 1px solid #7257fa;
+  border-radius: 100px 100px 100px 100px;
+  background-color: white;
+  padding: 0 20px 0 0;
+
+}
+
+.card {
+  --border-radius: 0.75rem;
+  --primary-color: #7257fa;
+  --secondary-color: #3c3852;
+  width: 210px;
+  font-family: "Arial";
+  padding: 1rem;
+  cursor: pointer;
+  border-radius: var(--border-radius);
+  background: #f1f1f3;
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+  position: relative;
+  margin: 35px;
+  transition: .5s;
+}
+.card:hover {
+  transform: scale(1.1);
+}
+
+.card>*+* {
+  margin-top: 1.1em;
+}
+
+.card .card__content {
+  color: var(--secondary-color);
+  font-size: 0.86rem;
+}
+
+.card .card__title {
+  padding: 0;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.card .card__date {
+  color: #6e6b80;
+  font-size: 0.8rem;
+}
+
+.card .card__arrow {
+  position: absolute;
+  background: var(--primary-color);
+  padding: 0.4rem;
+  border-top-left-radius: var(--border-radius);
+  border-bottom-right-radius: var(--border-radius);
+  bottom: 0;
+  right: 0;
+  transition: 0.2s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card svg {
+  transition: 0.2s;
+}
+.backno {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: -100;
+  transform: translate(-50%,-50%);
+}
+.backno h1 {
+  font-size: 12rem;
+  color: rgba(0, 0, 0, 0.096);
+  transition: 1s;
+}
+/* hover */
+.card:hover .card__title {
+  color: var(--primary-color);
+  text-decoration: underline;
+}
+
+.card:hover .backno h1 {
+  font-size: 14rem;
+  color: rgba(0, 0, 0, 0.288);
+}
+
+.card:hover .card__arrow {
+  background: #111;
+}
+
+.card:hover .card__arrow svg {
+  transform: translateX(3px);
+}
+.card .delete {
+  background-color: #5c020298;
+}
+.card .delete:hover {
+  color: #5c020298;
+  background-color: transparent;
+  border: 1px solid #5c020298;
+}
+button {
+  border: 1px solid transparent;
+  background: #7257fa;
+  border-radius: 25px;
+  padding: 5px 10px;
+  margin: 0 5px;
+  color: #f1f1f3;
+  transition: .1s;
+}
+
+button:hover {
+  border: 1px solid #7257fa;
+  background-color: transparent;
+  color: #7257fa;
+}
+
+.todoInput {
+  padding: 50px;
+}
+
+input {
+  padding: 10px 20px;
+  width: 300px;
+  margin: 5px 0;
+  border-radius: 25px;
+  border: 1px solid #7257fa;
+}
+.checkbox {
+  height: 25px;
+}
+
+.todoInput button {
+  font-size: 18px;
+  margin-top: 10px;
+}
