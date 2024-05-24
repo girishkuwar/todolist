@@ -1,0 +1,42 @@
+.BigTodo {
+    position: fixed;
+    z-index: 15;
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.39);
+    backdrop-filter: blur(5px);
+    top: 0;
+}
+
+.image {
+    display: flex;
+    height: 100vh;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.image .imgcontainer {
+    max-height: 90%;
+    max-width: 90%;
+    position: relative;
+}
+.imgcontainer .todo {
+    height: 450px;
+    width: 450px;
+    padding: 50px;
+    border-radius: 50px;
+}
+
+.todo h2 {
+    font-size: 2.8rem;
+}
+.todo h4 {
+    font-size: 1.7rem;
+}
+.todo button {
+    position: absolute;
+    bottom: 10%;
+    font-size: 1.2rem;
+}

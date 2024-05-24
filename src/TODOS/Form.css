@@ -1,12 +1,19 @@
 /* this card is inspired form this - https://georgefrancis.dev/ */
 body {
   background-color: rgb(201, 201, 201);
+
 }
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
 h1 {
   color: #7257fa;
   text-align: center;
   font-size: 3rem;
 }
+
 .container {
   grid-template-columns: repeat(4, 1fr);
   display: grid;
@@ -15,6 +22,8 @@ h1 {
   padding: 0 2%;
   grid-auto-columns: minmax(100px, auto);
 }
+
+
 
 .inputstyled {
   display: flex;
@@ -65,6 +74,7 @@ h1 {
   margin: 35px;
   transition: .5s;
 }
+
 .card:hover {
   transform: scale(1.1);
 }
@@ -106,18 +116,21 @@ h1 {
 .card svg {
   transition: 0.2s;
 }
+
 .backno {
   position: absolute;
   top: 50%;
   left: 50%;
   z-index: -100;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
 }
+
 .backno h1 {
   font-size: 12rem;
   color: rgba(0, 0, 0, 0.096);
   transition: 1s;
 }
+
 /* hover */
 .card:hover .card__title {
   color: var(--primary-color);
@@ -136,14 +149,17 @@ h1 {
 .card:hover .card__arrow svg {
   transform: translateX(3px);
 }
+
 .card .delete {
   background-color: #5c020298;
 }
+
 .card .delete:hover {
   color: #5c020298;
   background-color: transparent;
   border: 1px solid #5c020298;
 }
+
 button {
   border: 1px solid transparent;
   background: #7257fa;
@@ -171,6 +187,20 @@ input {
   border-radius: 25px;
   border: 1px solid #7257fa;
 }
+
+textarea {
+  width: 300px;
+  padding: 10px 20px;
+  border: 1px solid #7257fa;
+  border-radius: 21px;
+  margin: 5px 0;
+  font-size: 1.01rem;
+}
+
+textarea::-webkit-scrollbar {
+  display: none;
+}
+
 .checkbox {
   height: 25px;
 }
@@ -178,4 +208,20 @@ input {
 .todoInput button {
   font-size: 18px;
   margin-top: 10px;
+}
+
+.menu {
+  padding: 100px 20%;
+  display: flex;
+  justify-content: center;
+}
+
+.menu .menu-btns {
+  background: #7257fa18;
+  padding: 40px 100px;
+  border-radius: 50px;
+}
+
+::placeholder {
+  color: #7257fa;
 }
